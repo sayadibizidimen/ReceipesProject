@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RecetteRow: View {
+  
     var recette: Recette
 
     var body: some View {
+      
       HStack {
         recette.image
                         .resizable()
@@ -25,6 +27,16 @@ struct RecetteRow: View {
 
 struct RecetteRow_Previews: PreviewProvider {
     static var previews: some View {
-      RecetteRow(recette:Recettes[0])
+      Group {
+        
+        RecetteRow(recette:Recettes[5])
+        
+        RecetteRow(recette:Recettes[2])
+        
+      }
+      .previewLayout(.fixed(width: 300, height: 70))
+     // RecetteRow(recette:Recettes[1])
+
+      
     }
 }

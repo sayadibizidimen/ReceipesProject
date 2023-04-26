@@ -17,7 +17,7 @@ struct RecetteList: View {
       
                List(Recettes, id: \.id) { recette in
                    NavigationLink {
-                       DetailRecette()
+                       DetailRecette(recette: recette)
                    } label: {
                        RecetteRow(recette: recette)
                    }

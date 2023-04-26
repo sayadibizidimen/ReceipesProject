@@ -9,24 +9,24 @@ import Foundation
 import SwiftUI
 
 struct DetailRecette: View {
+
+  var recette: Recette
+  
   var body: some View {
-    
+   
     VStack {
-      FondImage()
+    FondImage()
       .frame(height: 300)
+    CircleImage(recette: recette)
       
-      //ZStack(/*alignment: .bottom*/) {
-        //Color.gray
-        CircleImage()
-          .offset(y: -130)
-          .padding(.bottom, -130)
-      //}
-     // .border(Color.gray)
-
+        .frame(height: 200)
+         .offset(y: -120)
+        
 
       
-      VStack(alignment: .leading) {
-        Text("Cesar Salad")
+      
+     VStack(alignment: .leading) {
+        Text(recette.name)
           .font(.title2)
           .foregroundColor(.green)
         
@@ -43,7 +43,7 @@ struct DetailRecette: View {
 
                         Text("All Details ")
                             .font(.title2)
-                        Text("Si alguna vez has tenido una idea para crear una app o estás pensando en iniciarte en el mundo del desarrollo de apps para iPhone o iPad, este libro te ayudará a convertir esas ideas borrosas de tu cabeza en un diseño UI (diseño de interfaz de usuario) o en un prototipo con funcionalidades ordenadas de una manera agradable, que sean fáciles de usar para conseguir un buen diseño UX (diseño de la experiencia del usuario). No necesitas conocimientos previos de diseño para entender este libro..")
+        Text(recette.description)
         
       }
       
@@ -58,6 +58,6 @@ struct DetailRecette: View {
 
 struct DetailRecette_Previews: PreviewProvider {
     static var previews: some View {
-      DetailRecette()
+      DetailRecette(recette: Recettes[6])
     }
 }

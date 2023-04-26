@@ -17,6 +17,8 @@
 		9504002C29C4AB7300ADE9CA /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9504002829C4AB7300ADE9CA /* CircleImage.swift */; };
 		9504002D29C4AB7300ADE9CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9504002929C4AB7300ADE9CA /* ContentView.swift */; };
 		9504002E29C4AB7300ADE9CA /* RecetteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9504002A29C4AB7300ADE9CA /* RecetteRow.swift */; };
+		9598C7E229F9448E006193D9 /* RecetteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598C7E129F9448E006193D9 /* RecetteList.swift */; };
+		9598C7E429F944A1006193D9 /* DetailRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598C7E329F944A1006193D9 /* DetailRecette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		9504002829C4AB7300ADE9CA /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		9504002929C4AB7300ADE9CA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9504002A29C4AB7300ADE9CA /* RecetteRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecetteRow.swift; sourceTree = "<group>"; };
+		9598C7E129F9448E006193D9 /* RecetteList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecetteList.swift; sourceTree = "<group>"; };
+		9598C7E329F944A1006193D9 /* DetailRecette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRecette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 		9504002629C4AB7300ADE9CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9598C7E329F944A1006193D9 /* DetailRecette.swift */,
+				9598C7E129F9448E006193D9 /* RecetteList.swift */,
 				9504002729C4AB7300ADE9CA /* FondImage.swift */,
 				9504002829C4AB7300ADE9CA /* CircleImage.swift */,
 				9504002929C4AB7300ADE9CA /* ContentView.swift */,
@@ -193,9 +199,11 @@
 				9504002B29C4AB7300ADE9CA /* FondImage.swift in Sources */,
 				9504002D29C4AB7300ADE9CA /* ContentView.swift in Sources */,
 				9504000E29C4AA5200ADE9CA /* ReceipesProjectApp.swift in Sources */,
+				9598C7E229F9448E006193D9 /* RecetteList.swift in Sources */,
 				9504002229C4AA7200ADE9CA /* ModelData.swift in Sources */,
 				9504002C29C4AB7300ADE9CA /* CircleImage.swift in Sources */,
 				9504002E29C4AB7300ADE9CA /* RecetteRow.swift in Sources */,
+				9598C7E429F944A1006193D9 /* DetailRecette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

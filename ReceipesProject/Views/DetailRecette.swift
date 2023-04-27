@@ -9,55 +9,44 @@ import Foundation
 import SwiftUI
 
 struct DetailRecette: View {
-
   var recette: Recette
-  
   var body: some View {
-   
-    VStack {
-    FondImage()
-      .frame(height: 300)
-    CircleImage(recette: recette)
-      
-        .frame(height: 200)
-         .offset(y: -120)
-        
-
-      
-      
-     VStack(alignment: .leading) {
-        Text(recette.name)
-          .font(.title2)
-          .foregroundColor(.green)
-        
-        HStack {
-          Text("Fresh Ingredients")
-            .font(.subheadline)
-          
-          Spacer()
-          
-          Text("The Entrees")
-            .font(.subheadline)
+    ScrollView {
+      VStack {
+        FondImage()
+//          .frame(height: 300)
+        CircleImage(recette: recette)
+          .frame(height: 200)
+          .offset(y: -120)
+        VStack(alignment: .leading) {
+          Text(recette.name)
+            .font(.title2)
+            .foregroundColor(.green)
+          HStack {
+            Text("Fresh Ingredients")
+              .font(.subheadline)
+            Spacer()
+            Text(recette.park)
+              .font(.subheadline)
+          }
+          Divider()
+          Text("All Details ")
+            .font(.title2)
+          Text(recette.description)
         }
-        Divider()
-
-                        Text("All Details ")
-                            .font(.title2)
-        Text(recette.description)
-        
+        .padding(.all, 16)
       }
-      
-      .padding()
-     
+//      .frame(maxWidth: .infinity)
+//      .fixedSize(horizontal: false, vertical: true
+//      )
+
     }
-    
   }
-  
 }
 
 
 struct DetailRecette_Previews: PreviewProvider {
-    static var previews: some View {
-      DetailRecette(recette: Recettes[6])
-    }
+  static var previews: some View {
+    DetailRecette(recette: Recettes[6])
+  }
 }

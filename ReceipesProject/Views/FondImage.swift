@@ -10,6 +10,7 @@ import SwiftUI
 struct FondImage: View {
     var body: some View {
         Image("background")
+        .resizable()
     }
 }
 

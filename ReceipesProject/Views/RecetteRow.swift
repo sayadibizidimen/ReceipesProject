@@ -20,6 +20,11 @@ struct RecetteRow: View {
                     Text(recette.name)
 
                     Spacer()
+        
+             if recette.isFavorite {
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(.red)
+                    }
                 }
       }
     }

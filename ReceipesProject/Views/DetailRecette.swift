@@ -9,7 +9,12 @@ import Foundation
 import SwiftUI
 
 struct DetailRecette: View {
+  
+  @EnvironmentObject var modelData: ModelData
   var recette: Recette
+  var recetteIndex: Int {
+          modelData.Recettes.firstIndex(where: { $0.id == recette.id })!
+      }
   var body: some View {
     ScrollView {
       VStack {
@@ -19,9 +24,12 @@ struct DetailRecette: View {
           .frame(height: 200)
           .offset(y: -120)
         VStack(alignment: .leading) {
+          HStack{
           Text(recette.name)
             .font(.title2)
             .foregroundColor(.green)
+          FavoriteButton(isSet: $modelData.Recettes[recetteIndex].isFavorite)
+          }
           HStack {
             Text("Fresh Ingredients")
               .font(.subheadline)
@@ -47,6 +55,6 @@ struct DetailRecette: View {
 
 struct DetailRecette_Previews: PreviewProvider {
   static var previews: some View {
-    DetailRecette(recette: Recettes[6])
+    DetailRecette(recette: ModelData().Recettes[6])
   }
 }

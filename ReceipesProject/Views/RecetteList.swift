@@ -11,9 +11,11 @@ struct RecetteList: View {
   
   
   @State private var showFavoritesOnly = true
+  @EnvironmentObject var modelData: ModelData
+
   
   var filteredRecettes: [Recette] {
-    Recettes.filter { recette in
+    modelData.Recettes.filter { recette in
       (!showFavoritesOnly || recette.isFavorite)
     }
   }

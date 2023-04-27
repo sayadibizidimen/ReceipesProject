@@ -13,8 +13,7 @@ struct Recette: Hashable, Codable, Identifiable {
   
     var id: Int
     var name: String
-    var park: String
-    var state: String
+    var category: String
     var description: String
     var isFavorite: Bool
 

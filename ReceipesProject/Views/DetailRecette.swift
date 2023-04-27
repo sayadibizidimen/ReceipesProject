@@ -34,7 +34,7 @@ struct DetailRecette: View {
             Text("Fresh Ingredients")
               .font(.subheadline)
             Spacer()
-            Text(recette.park)
+            Text(recette.category)
               .font(.subheadline)
           }
           Divider()

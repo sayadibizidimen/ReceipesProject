@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 
-var Recettes: [Recette] = load("Recette")
+//var Recettes: [Recette] = load("Recette")
 
 final class ModelData: ObservableObject {
   

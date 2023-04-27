@@ -34,9 +34,9 @@ struct RecetteRow_Previews: PreviewProvider {
     static var previews: some View {
       Group {
         
-        RecetteRow(recette:Recettes[5])
+        RecetteRow(recette:ModelData().Recettes[5])
         
-        RecetteRow(recette:Recettes[2])
+        RecetteRow(recette:ModelData().Recettes[2])
         
       }
       .previewLayout(.fixed(width: 300, height: 70))

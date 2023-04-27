@@ -26,6 +26,6 @@ struct CircleImage: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage(recette:Recettes[3])
+      CircleImage(recette:ModelData().Recettes[3])
     }
 }

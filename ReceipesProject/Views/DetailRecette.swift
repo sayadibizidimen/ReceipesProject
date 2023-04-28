@@ -56,5 +56,6 @@ struct DetailRecette: View {
 struct DetailRecette_Previews: PreviewProvider {
   static var previews: some View {
     DetailRecette(recette: ModelData().Recettes[6])
+      .environmentObject(ModelData())
   }
 }

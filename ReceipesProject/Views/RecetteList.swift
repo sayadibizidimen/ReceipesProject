@@ -5,6 +5,7 @@
 //  Created by sayadi imen on 17/3/2023.
 
 import SwiftUI
+import Foundation
 
 
 struct RecetteList: View {

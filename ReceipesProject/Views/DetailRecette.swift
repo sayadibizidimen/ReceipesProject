@@ -20,7 +20,7 @@ struct DetailRecette: View {
       VStack {
         FondImage()
 //          .frame(height: 300)
-        CircleImage(recette: recette)
+CircleImage(recette: recette)
           .frame(height: 200)
           .offset(y: -120)
         VStack(alignment: .leading) {

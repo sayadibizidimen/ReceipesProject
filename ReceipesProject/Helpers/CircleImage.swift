@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct CircleImage: View {
   
   var recette: Recette
@@ -24,6 +24,38 @@ struct CircleImage: View {
     }
 }
 
+struct CircleImage_Previews: PreviewProvider {
+    static var previews: some View {
+      CircleImage(recette:ModelData().Recettes[3])
+    }
+}
+*/
+struct CircleImage: View {
+  
+  var recette: Recette
+  
+    var body: some View {
+        if let image = recette.image {
+            image
+                .resizable()
+                .frame(height: 300)
+                .clipShape(Circle())
+                .overlay {
+                    Circle().stroke(.white, lineWidth: 4)
+                }
+                .shadow(radius: 7)
+        } else {
+            Image(systemName: "photo")
+                .resizable()
+                .frame(height: 300)
+                .clipShape(Circle())
+                .overlay {
+                    Circle().stroke(.white, lineWidth: 4)
+                }
+                .shadow(radius: 7)
+        }
+    }
+}
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
       CircleImage(recette:ModelData().Recettes[3])

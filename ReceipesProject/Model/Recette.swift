@@ -17,10 +17,14 @@ struct Recette: Hashable, Codable, Identifiable {
     var description: String
     var isFavorite: Bool
 
-  
-  private var imageName: String
-      var image: Image {
-          Image(imageName)
-      }
+    var imageName: Data?
+
+    var image: Image? {
+        if let data = imageName, let uiImage = UIImage(data: data) {
+            return Image(uiImage: uiImage)
+        }
+        return nil
+    }
   
 }
+
